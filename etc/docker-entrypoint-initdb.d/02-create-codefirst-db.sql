@@ -1,0 +1,14 @@
+CREATE DATABASE codefirst;
+CREATE USER codefirstuser WITH PASSWORD 'codefirstuser';
+
+GRANT ALL PRIVILEGES ON DATABASE codefirst TO codefirstuser;
+ALTER DATABASE codefirst OWNER TO codefirstuser;
+
+\connect codefirst
+
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO codefirstuser;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO codefirstuser;
+GRANT ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA public TO codefirstuser;
+
+ALTER DEFAULT PRIVILEGES IN SCHEMA public
+    GRANT ALL PRIVILEGES ON TABLES TO codefirstuser;
