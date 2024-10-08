@@ -1,0 +1,55 @@
+@EFExample_API_HostAddress = http://localhost:5270
+
+###
+# @name=/api/dbfirstcustomers - Get All Customers
+GET {{EFExample_API_HostAddress}}/api/dbfirstcustomers/
+Accept: application/json
+
+###
+# @name=/api/dbfirstcustomers/1 - Get A Specific Customer
+GET {{EFExample_API_HostAddress}}/api/dbfirstcustomers/1
+
+###
+# @name=/api/dbfirstcustomers - Create a New Customer
+POST {{EFExample_API_HostAddress}}/api/dbfirstcustomers
+Accept: application/json
+Content-Type: application/json
+
+{
+  "firstName": "testfirst",
+  "lastName": "testlast",
+  "email": "testfirst@test.com",
+  "phone": "123-456-7890"
+}
+
+###
+# @name=/api/dbfirstcustomers/5 - Delete an existing Customer
+DELETE {{EFExample_API_HostAddress}}/api/dbfirstcustomers/5
+Accept: application/json
+
+###
+# @name=/api/codefirstcustomers - Get All Customers
+GET {{EFExample_API_HostAddress}}/api/codefirstcustomers/
+Accept: application/json
+
+###
+# @name=/api/codefirstcustomers/1 - Get A Specific Customer
+GET {{EFExample_API_HostAddress}}/api/codefirstcustomers/1
+
+###
+# @name=/api/codefirstcustomers - Create a New Customer
+POST {{EFExample_API_HostAddress}}/api/codefirstcustomers
+Accept: application/json
+Content-Type: application/json
+
+{
+  "firstName": "testfirst",
+  "lastName": "testlast",
+  "email": "testfirst@test.com",
+  "phone": "123-456-7890"
+}
+
+###
+# @name=/api/codefirstcustomers/1 - Delete an existing Customer
+DELETE {{EFExample_API_HostAddress}}/api/codefirstcustomers/1
+Accept: application/json
