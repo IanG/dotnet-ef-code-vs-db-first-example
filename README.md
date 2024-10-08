@@ -5,7 +5,7 @@
 This repository provides examples of how you can use .NET Entity Framework from two different perspectives:
 
 - **DB First** - Start with an existing database schema and build entity classes into a DbContext From it
-- **Code First** - Start with entity classes and create the BbContext and database tables from them
+- **Code First** - Start with entity classes and create the DbContext and database tables from them
 
 ## The Database
 
@@ -172,7 +172,7 @@ When we use the term "code-first" with Entity Framework, what we mean is that we
 
 In the `Common` project we already have `Common/Data/CodeFirst/CodeFirstDbContext.cs` and in `Common/Data/CodeFirst/Entitles` we have a pre-built set of Entity classes.
 
-Examine the classes and you will see they have benn annotated to guide EF regarding things like:
+Examine the classes and you will see they have been annotated to guide EF regarding things like:
 
 - Column naming and ordering
 - Datatypes
@@ -229,7 +229,7 @@ Done.
 This has now applied the migration `InitialCreate` to the database.  If we run:
 
 ```
-dotnet ef database update --startup-project API --project Common --context CodeFirstDbContext
+dotnet ef migrations list --startup-project API --project Common --context CodeFirstDbContext
 ```
 
 You'll see our migration is no longer pending.
@@ -247,6 +247,6 @@ You can now use the `CodeFirstCustomersController` and the Swagger page to test 
 
 ## Conclusion
 
-In this example we have taken a look at both approaches for using Entity Framework.  We have shown we can start fromm an existing database or we can start with entities and create the equivalent database.
+In this example we have taken a look at both approaches for using Entity Framework.  We have shown we can start from an existing database or we can start with entities and create the equivalent database.
 
 I hope this has maybe served as a useful reference.  Thanks for looking.
